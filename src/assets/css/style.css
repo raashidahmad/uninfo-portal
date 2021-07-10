@@ -1,138 +1,41 @@
-.topContent {
-    font-size: 14px;
-    letter-spacing: 1px;
-    padding: 0px!important;
-    text-align: justify;
-    padding-bottom: 5px;
-    padding-top: 5px;
-}
-.body {
-    color: #333132!important;
-}
-
-.nav {
-    color: #333132;
-    background-color: #fff!important;
-    box-shadow: none;
-}
-
-    nav a {
-        color: #333132!important;
-    }
-
-    nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
-        display: block;
-        font-size: 30px;
-        height: 56px;
-        line-height: 56px;
-    }
-.side-nav {
-    padding-top: 10px;
-}
-
-.side-nav-top img {
-    padding: 15px;
-}
-
-    .side-nav-top img.exit-icon {
-        height: 55px;
-        margin-bottom: 5px;
-    }
-
-.side-nav-ul-top {
-    padding-top: 100px;
-}
-
-.nav-wrapper .side-nav-top img.dco-logo {
-    max-width: 200px;
-    margin-top: 10px;
-    margin-left: 3px;
-}
-
-.nav-wrapper img.dco-logo {
-    margin-top: 10px;
-    position: absolute;
-    max-width: 200px;
-}
-
-.nav-wrapper img.uninfo-logo {
-    margin-left: 240px;
-    position: absolute;
-    max-width: 160px;
-    margin-top: 10px;
-}
-
-.side-nav li.white {
-    padding: 0 10px;
-}
-
-.side-nav li > a {
-    color: #333132;
-    display: block;
-    font-size: 1.1em;
-    font-family: "Segoe UI", wf_segoe-ui_normal, helvetica, arial, sans-serif;
-    font-weight: 400;
-    height: 48px;
-    line-height: 48px;
-    padding: 0 32px;
-}
-
-    .side-nav li > a.bold-text {
-        font-weight: 700;
-        font-size: 1.3em;
-        font-family: "Segoe UI", wf_segoe-ui_normal, helvetica, arial, sans-serif;
-    }
-
-.nav-wrapper .title {
-    margin-left: 250px;
-    font-family: "Segoe UI", wf_segoe-ui_normal, helvetica, arial, sans-serif;
-    font-weight: 600;
-    padding-top: 10px;
-    margin-top: 0px;
-    color: rgb(79, 154, 214);
-    top:12px!important;margin-left:300px!important;
-}
-
-.btn, .btn a:hover, .btn a.active {
-    background: #5090CD;
-}
-
-
-.h6 {
-    color: rgb(79, 154, 214);
-    font-size: 16px !important;
-    font-weight: 600 !important;
-    float: left;
-}
-
-.dcocontainer {
-    margin-top: 30px !important;
-    margin-left: 100px !important;
-    width: 80% !important;
-}
-.tabs .tab a {
-    color: rgb(79, 154, 214);
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    padding: 0 12px !important;
-    text-transform: none !important;
-}
-
-.tabs {
-    text-align: center;
+#wrapper {
     overflow-x: hidden;
-}
-
-    .tabs .indicator {
-        background-color: rgb(79, 154, 214);
-        text-align: center;
+  }
+  
+  #sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin 0.25s ease-out;
+  }
+  
+  #sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+  }
+  
+  #sidebar-wrapper .list-group {
+    width: 15rem;
+  }
+  
+  #page-content-wrapper {
+    min-width: 100vw;
+  }
+  
+  body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
     }
-
-    .tabs .tab a:hover, .tabs .tab a.active {
-        color: rgb(79, 154, 214);
-        font-size: 14px !important;
-        font-weight: 600 !important;
-        padding: 0 12px !important;
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
     }
-
-
+  
+    body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+  }

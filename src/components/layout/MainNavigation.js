@@ -1,24 +1,34 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import classes from './MainNavigation.module.css';
 import logo1 from '../../assets/images/uninfo_logo.png';
 import logo2 from '../../assets/images/covid19_logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function MainNavigation() {
     return (
-        <div className="header">
-            <nav>
-                <div className="nav-wrapper">
-                    <Link  to="/" className="button-collapse show-on-large">
-                        <i className="material-icons">menu</i>
-                    </Link>
-                    <Link to="/">
-                        <img className="dco-logo" src={logo1} alt="Logo" />
-                        <img className="dco-logo" className={classes.left85} src={logo2} alt="Logo" />
-                    </Link>
-                    <h3 className="title">COVID-19 DATA PORTAL</h3>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <div className="container-fluid">
+                <button className="btn btn-primary" id="sidebarToggle">
+                    <FontAwesomeIcon icon="list" />
+                </button>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li className="nav-item active"><a className="nav-link" href="#!">Home</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#!">Link</a></li>
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a className="dropdown-item" href="#!">Action</a>
+                                <a className="dropdown-item" href="#!">Another action</a>
+                                <div className="dropdown-divider"></div>
+                                <a className="dropdown-item" href="#!">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     );
 }
 export default MainNavigation;
