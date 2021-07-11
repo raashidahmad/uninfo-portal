@@ -1,7 +1,22 @@
-.customheader {
-    top:12px!important;margin-left:300px!important;
-}
+.bgWhite {
+    background-color: whitesmoke !important;
+  }
 
-.left185 {
-    left: 185px !important;
-}
+  .logo {
+    left: 10px;
+  }
+
+  .covidHeadline {
+      font-weight: bold;
+      font-size: 16px;
+      margin-left: 15px;
+      color: #4f9ad6;
+  }
+
+  .defaultBlueColor {
+    color: #4f9ad6;
+  }
+
+  .logo img {
+      height: 60px;
+  }
