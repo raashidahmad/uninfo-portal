@@ -46,5 +46,14 @@
   }
   
   .navbar-light .navbar-nav .nav-link:hover {
-    color: #154872 !important;
+    color: #1b68b4 !important;
+  }
+
+  .custom-link {
+      cursor: pointer;
+      color: #4f9ad6;
+  }
+
+  .custom-link:hover {
+    text-decoration: underline;
   }

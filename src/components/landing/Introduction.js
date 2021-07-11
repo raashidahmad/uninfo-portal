@@ -1,4 +1,8 @@
+import Settings from '../../config/settings';
+
 function Introduction() {
+    const countries = Settings.countries;
+    let counter = 0;
     return (
         <div className="row">
             <p>
@@ -18,7 +22,23 @@ function Introduction() {
                 dashboard is powered by the collective data collection efforts of  
                 &nbsp;<a href="https://unsdg.un.org/about/who-we-are" default="_blank">UNSDG members</a>.
             </p>
+            <div className="col-md-12">
+                <span className="float-right">
+                    Reporting Status:&nbsp;
+                    <span className="custom-link">By Country</span>&nbsp;|&nbsp;
+                    <span className="custom-link">By Lead Agency</span>
+                </span>
+            </div>
+            <div className="row form-inline">
+                <label>Select country: &nbsp;</label>
+                <select className="form-control" id="countries">
+                    {countries.map((country) => (
+                        <option key={++counter} value={country.value}>{country.text}</option>
+                    ))}
+                </select>
+            </div>
         </div>
+        
     );
 }
 export default Introduction;
