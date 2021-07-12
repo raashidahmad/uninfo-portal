@@ -28,7 +28,7 @@ function Introduction() {
     }
 
     function socialCohesionHandler() {
-        
+
     }
 
     return (
@@ -68,7 +68,7 @@ function Introduction() {
                 </div>
             </div>
             <div className="row margin-top-10">
-              <table>
+              <table className="table">
                   <tbody>
                       <tr>
                           <td>
@@ -77,27 +77,27 @@ function Introduction() {
                             </button>
                           </td>
                           <td>
-                            <button className="btn btn-success btn-lg">
+                            <button className="btn btn-success btn-lg" onClick={healthFirstHandler}>
                                 HEALTH FIRST
                             </button>
                           </td>
                           <td>
-                            <button className="btn btn-primary btn-lg">
+                            <button className="btn btn-primary btn-lg" onClick={protectingPeopleHandler}>
                                 PROTECTING PEOPLE
                             </button>
                           </td>
                           <td>
-                            <button className="btn btn-warning btn-lg">
+                            <button className="btn btn-warning btn-lg" onClick={economicResponseHandler}>
                                 ECONOMIC RESPONSE
                             </button>
                           </td>
                           <td>
-                            <button className="btn btn-danger btn-lg">
+                            <button className="btn btn-danger btn-lg" onClick={macroEconomicResponseHandler}>
                                 MACROECONOMIC RESPONSE
                             </button>
                           </td>
                           <td>
-                            <button className="btn btn-secondary btn-lg">
+                            <button className="btn btn-secondary btn-lg" onClick={socialCohesionHandler}>
                                 SOCIAL COHESION
                             </button>
                           </td>
@@ -106,7 +106,6 @@ function Introduction() {
               </table>
             </div>
         </div>
-        
     );
 }
 export default Introduction;

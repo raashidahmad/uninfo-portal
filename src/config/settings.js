@@ -1,5 +1,5 @@
 const Settings = {
-    countries: [
+    "countries": [
         {
             "value": "GBL",
             "text": "Global"

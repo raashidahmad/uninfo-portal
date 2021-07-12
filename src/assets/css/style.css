@@ -61,3 +61,20 @@
   .margin-top-10 {
     margin-top: 10px !important;
   }
+
+  .margin-left-10 {
+    margin-left: 10px !important;
+  }
+
+  .success-container {
+    background-color: #28a745;
+    color: whitesmoke;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .hr-line {
+    background: #28a745;
+    height: 5px;
+    width: 100%;
+  }
