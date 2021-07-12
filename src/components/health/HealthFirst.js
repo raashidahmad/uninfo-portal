@@ -2,11 +2,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeartbeat, faChild, faSyringe, faHamburger } from '@fortawesome/free-solid-svg-icons';
 import Data from '../../config/data';
 import Vaccination from "./Vaccination";
+import Papa from 'papaparse';
+import { useEffect } from "react";
 
 function HealthFirst(props) {
-    const maternalHealth = Data.maternalHealth;
-    const vaccinationProgrammes = Data.vaccinationProgrammes;
-    const nutritionProgrammes = Data.nutritionProgrammes;
+    useEffect(() => {
+        getData();
+    }, []);
+
+    async function getData() {
+        const data = Papa.parse(await fetchCsv());
+        console.log(data);
+        return data;
+    }
+    
+    async function fetchCsv() {
+        const response = await fetch('data/data.csv');
+        const reader = response.body.getReader();
+        const result = await reader.read();
+        const decoder = new TextDecoder('utf-8');
+        const csv = await decoder.decode(result.value);
+        console.log('csv', csv);
+        return csv;
+    }
 
     return (
         <div>
@@ -52,11 +70,9 @@ function HealthFirst(props) {
                         </div>
                     </div>
                 </div>
-
             </div>
             <Vaccination />
         </div>
-
     );
 }
 export default HealthFirst;

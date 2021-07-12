@@ -1,5 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeartbeat } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
+import Papa from 'papaparse';
+
 
 function Vaccination() {
     return (
