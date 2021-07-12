@@ -3,7 +3,7 @@ import classes from './MainNavigation.module.css';
 import logo1 from '../../assets/images/uninfo_logo.png';
 import logo2 from '../../assets/images/covid19_logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faList } from '@fortawesome/free-solid-svg-icons'
+import { faList } from '@fortawesome/free-solid-svg-icons';
 
 function MainNavigation() {
     return (

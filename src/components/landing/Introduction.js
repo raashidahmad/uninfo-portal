@@ -1,8 +1,36 @@
 import Settings from '../../config/settings';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeartbeat } from '@fortawesome/free-solid-svg-icons';
 
 function Introduction() {
     const countries = Settings.countries;
     let counter = 0;
+    let countryCode = countries[0].value;
+    
+    function countryChangeHandler(e) {
+        countryCode = e.currentTarget.value;
+    }
+
+    function healthFirstHandler() {
+
+    }
+
+    function protectingPeopleHandler() {
+
+    }
+
+    function economicResponseHandler() {
+
+    }
+
+    function macroEconomicResponseHandler() {
+
+    }
+
+    function socialCohesionHandler() {
+        
+    }
+
     return (
         <div className="row">
             <p>
@@ -29,13 +57,53 @@ function Introduction() {
                     <span className="custom-link">By Lead Agency</span>
                 </span>
             </div>
-            <div className="row form-inline">
-                <label>Select country: &nbsp;</label>
-                <select className="form-control" id="countries">
-                    {countries.map((country) => (
-                        <option key={++counter} value={country.value}>{country.text}</option>
-                    ))}
-                </select>
+            <div className="col-md-12">
+                <div className="form-inline">
+                    <label>Select country: &nbsp;</label>
+                    <select className="form-control" id="countries" onChange={countryChangeHandler}>
+                        {countries.map((country) => (
+                            <option key={++counter} value={country.value}>{country.text}</option>
+                        ))}
+                    </select>
+                </div>
+            </div>
+            <div className="row margin-top-10">
+              <table>
+                  <tbody>
+                      <tr>
+                          <td>
+                            <button className="btn btn-success btn-lg">
+                                <FontAwesomeIcon icon={faHeartbeat} size="3x" />
+                            </button>
+                          </td>
+                          <td>
+                            <button className="btn btn-success btn-lg">
+                                HEALTH FIRST
+                            </button>
+                          </td>
+                          <td>
+                            <button className="btn btn-primary btn-lg">
+                                PROTECTING PEOPLE
+                            </button>
+                          </td>
+                          <td>
+                            <button className="btn btn-warning btn-lg">
+                                ECONOMIC RESPONSE
+                            </button>
+                          </td>
+                          <td>
+                            <button className="btn btn-danger btn-lg">
+                                MACROECONOMIC RESPONSE
+                            </button>
+                          </td>
+                          <td>
+                            <button className="btn btn-secondary btn-lg">
+                                SOCIAL COHESION
+                            </button>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
             </div>
         </div>
         
