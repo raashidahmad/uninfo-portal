@@ -3,26 +3,41 @@ import { faHeartbeat, faChild, faSyringe, faHamburger } from '@fortawesome/free-
 import Data from '../../config/data';
 import Vaccination from "./Vaccination";
 import Papa from 'papaparse';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function HealthFirst(props) {
+    const [chartData, setChartData] = useState([]);
+    
     useEffect(() => {
-        getData();
+        (async function getData() {
+            const result = Papa.parse(await fetchCsv());
+            if (result.data) {
+                let data = [];
+                result.data.shift();
+                result.data.forEach((d) => {
+                    var obj = {
+                        name: d[0],
+                        age: d[1],
+                        salary: d[2]
+                    }
+                    data.push(obj);
+                });
+                console.log(data);
+                setChartData(data);
+            }
+            //return data;
+        })();
+
+        
     }, []);
 
-    async function getData() {
-        const data = Papa.parse(await fetchCsv());
-        console.log(data);
-        return data;
-    }
-    
     async function fetchCsv() {
         const response = await fetch('data/data.csv');
         const reader = response.body.getReader();
         const result = await reader.read();
         const decoder = new TextDecoder('utf-8');
         const csv = await decoder.decode(result.value);
-        console.log('csv', csv);
+        //console.log('csv', csv);
         return csv;
     }
 
@@ -71,7 +86,7 @@ function HealthFirst(props) {
                     </div>
                 </div>
             </div>
-            <Vaccination />
+            <Vaccination data={chartData} />
         </div>
     );
 }
