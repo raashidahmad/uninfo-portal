@@ -12,6 +12,7 @@ function Vaccination(props) {
             </div>
             <div className="row">
                 <div className="col-md-6">
+                    <h5 className="text-success margin-top-10">Quarterly Progress</h5>
                     <LineChart
                         width={400}
                         height={400}
@@ -28,6 +29,7 @@ function Vaccination(props) {
                 </div>
 
                 <div className="col-md-6">
+                    <h5 className="text-success margin-top-10">People Supported by Region</h5>
                     <BarChart
                         width={600}
                         height={400}

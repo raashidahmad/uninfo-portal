@@ -4,6 +4,8 @@ import Data from '../../config/data';
 import Vaccination from "./Vaccination";
 import Papa from 'papaparse';
 import { useEffect, useState } from "react";
+import Immunization from "./Immunization";
+import HealthWorker from "./HealthWorker";
 
 function HealthFirst(props) {
     const [chartData, setChartData] = useState([]);
@@ -25,10 +27,7 @@ function HealthFirst(props) {
                 console.log(data);
                 setChartData(data);
             }
-            //return data;
         })();
-
-        
     }, []);
 
     async function fetchCsv() {
@@ -37,7 +36,6 @@ function HealthFirst(props) {
         const result = await reader.read();
         const decoder = new TextDecoder('utf-8');
         const csv = await decoder.decode(result.value);
-        //console.log('csv', csv);
         return csv;
     }
 
@@ -87,6 +85,8 @@ function HealthFirst(props) {
                 </div>
             </div>
             <Vaccination data={chartData} />
+            <Immunization />
+            <HealthWorker />
         </div>
     );
 }
