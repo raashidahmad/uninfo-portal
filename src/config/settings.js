@@ -520,6 +520,14 @@ const Settings = {
             "value": "ZWE",
             "text": "Zimbabwe"
         }
-    ]
+    ],
+    "subGroups": {
+        "maternalHealth": "Maternal Health",
+        "nutritionProgrammes": "Nutrition Programmes",
+        "vaccinationProgrammes": "Vaccination Programmes",
+        "ldcs": "LDCs",
+        "lldcs": "LLDCs",
+        "sids": "SIDS"
+    }
 }
 export default Settings;

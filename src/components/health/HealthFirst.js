@@ -6,9 +6,10 @@ import Papa from 'papaparse';
 import { useEffect, useState } from "react";
 import Immunization from "./Immunization";
 import HealthWorker from "./HealthWorker";
+import Settings from "../../config/settings";
 
 function HealthFirst(props) {
-    const [chartData, setChartData] = useState([]);
+    const [vaccinationChartData, setVaccinationChartData] = useState([]);
     
     useEffect(() => {
         (async function getData() {
@@ -18,14 +19,17 @@ function HealthFirst(props) {
                 result.data.shift();
                 result.data.forEach((d) => {
                     var obj = {
-                        name: d[0],
-                        age: d[1],
-                        salary: d[2]
+                        code: d[0],
+                        indicator: d[1],
+                        subGroup: d[2],
+                        timePeriod: d[3],
+                        value: d[4]
                     }
                     data.push(obj);
                 });
-                console.log(data);
-                setChartData(data);
+                let vaccinationData = data.filter(d => d.code == 1);
+                console.log(vaccinationData);
+                setVaccinationChartData(vaccinationData);
             }
         })();
     }, []);
@@ -84,7 +88,7 @@ function HealthFirst(props) {
                     </div>
                 </div>
             </div>
-            <Vaccination data={chartData} />
+            <Vaccination data={vaccinationChartData} />
             <Immunization />
             <HealthWorker />
         </div>

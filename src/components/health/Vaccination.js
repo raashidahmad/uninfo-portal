@@ -19,12 +19,12 @@ function Vaccination(props) {
                         data={props.data}
                         margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
                     >
-                        <XAxis dataKey="name" />
-                        <YAxis />
+                        <XAxis dataKey="subGroup" />
+                        <YAxis dataKey="value" />
                         <Tooltip />
                         <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
-                        <Line type="monotone" dataKey="age" stroke="#8884d8" />
-                        <Line type="monotone" dataKey="salary" stroke="#82ca9d" />
+                        <Line type="monotone" dataKey="subGroup" stroke="#8884d8" />
+                        <Line type="monotone" dataKey="value" stroke="#82ca9d" />
                     </LineChart>
                 </div>
 
@@ -42,12 +42,11 @@ function Vaccination(props) {
                         }}
                     >
                         <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
+                        <XAxis dataKey="subGroup" />
                         <YAxis />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="age" fill="#8884d8" />
-                        <Bar dataKey="salary" fill="#82ca9d" />
+                        <Bar dataKey="value" fill="#82ca9d" />
                     </BarChart>
                 </div>
             </div>
