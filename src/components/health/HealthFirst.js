@@ -10,6 +10,9 @@ import Settings from "../../config/settings";
 
 function HealthFirst(props) {
     const [vaccinationChartData, setVaccinationChartData] = useState([]);
+    const [ldcsValue, setLDCsValue] = useState([]);
+    const [lldcsValue, setLLDCsValue] = useState({});
+    const [sidsValue, setSIDsValue] = useState({});
     
     useEffect(() => {
         (async function getData() {
@@ -27,8 +30,39 @@ function HealthFirst(props) {
                     }
                     data.push(obj);
                 });
+
                 let vaccinationData = data.filter(d => d.code == 1);
-                console.log(vaccinationData);
+                let ldcsResult = data.filter(v => v.code == 1 && v.subGroup == Settings.subGroups.ldcs);
+                let lldcsResult = data.filter(v => v.code == 1 && v.subGroup == Settings.subGroups.lldcs);
+                let sidsResult = data.filter(v => v.code == 1 && v.subGroup == Settings.subGroups.sids);
+
+                let ldcsObj = {
+                    subGroup: Settings.subGroups.ldcs,
+                    value: 0
+                };
+                if (ldcsResult.length > 0) {
+                    ldcsObj.value = ldcsResult[0].value;
+                    setLDCsValue(ldcsObj);
+                }
+
+                let lldcsObj = {
+                    subGroup: Settings.subGroups.lldcs,
+                    value: 0
+                };
+                if (lldcsResult.length > 0) {
+                    lldcsObj.value = lldcsResult[0].value;   
+                    setLLDCsValue(lldcsObj);                 
+                }
+
+                let sidsObj = {
+                    subGroup: Settings.subGroups.sids,
+                    value: 0
+                };
+                if (sidsResult.length > 0) {
+                    sidsObj.value = sidsResult[0].value;
+                    setSIDsValue(sidsObj);
+                }
+
                 setVaccinationChartData(vaccinationData);
             }
         })();
@@ -88,7 +122,7 @@ function HealthFirst(props) {
                     </div>
                 </div>
             </div>
-            <Vaccination data={vaccinationChartData} />
+            <Vaccination data={vaccinationChartData} ldcs={ldcsValue} />
             <Immunization />
             <HealthWorker />
         </div>

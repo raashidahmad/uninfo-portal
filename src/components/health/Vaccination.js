@@ -11,11 +11,16 @@ function Vaccination(props) {
                 </span>
             </div>
             <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-4">
+                    <div className="text-center">
+                        <h4>{props.ldcs.value}</h4>
+                    </div>
+                </div>
+                <div className="col-md-4">
                     <h5 className="text-success margin-top-10">Quarterly Progress</h5>
                     <LineChart
-                        width={400}
-                        height={400}
+                        width={300}
+                        height={300}
                         data={props.data}
                         margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
                     >
@@ -28,11 +33,11 @@ function Vaccination(props) {
                     </LineChart>
                 </div>
 
-                <div className="col-md-6">
+                <div className="col-md-4">
                     <h5 className="text-success margin-top-10">People Supported by Region</h5>
                     <BarChart
-                        width={600}
-                        height={400}
+                        width={400}
+                        height={300}
                         data={props.data}
                         margin={{
                             top: 20,
