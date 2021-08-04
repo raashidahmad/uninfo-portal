@@ -528,6 +528,7 @@ const Settings = {
         "ldcs": "LDCs",
         "lldcs": "LLDCs",
         "sids": "SIDS"
-    }
+    },
+    "figureMillionDividend" : 100000
 }
 export default Settings;

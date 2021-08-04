@@ -13,7 +13,14 @@ function Vaccination(props) {
             <div className="row">
                 <div className="col-md-4">
                     <div className="text-center">
-                        <h4>{props.ldcs.value}</h4>
+                        <h5 className="margin-top-10"><b>{props.ldcs.value} M</b></h5>
+                        <h4 className="text-success">{props.ldcs.subGroup}</h4>
+
+                        <h5 className="margin-top-20"><b>{props.lldcs.value} M</b></h5>
+                        <h4 className="text-success">{props.lldcs.subGroup}</h4>
+
+                        <h5 className="margin-top-20"><b>{props.sids.value} M</b></h5>
+                        <h4 className="text-success">{props.sids.subGroup}</h4>
                     </div>
                 </div>
                 <div className="col-md-4">
