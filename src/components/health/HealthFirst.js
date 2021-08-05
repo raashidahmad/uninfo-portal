@@ -18,6 +18,15 @@ function HealthFirst(props) {
     const [sidsValue, setSIDsValue] = useState({});
     
     useEffect(() => {
+        const QUARTER_ONE = Settings.quarters.quarterOne;
+        const MATERNAL_HEALTH = Settings.subGroups.maternalHealth;
+        const VACCINATION_PROGRAMS = Settings.subGroups.vaccinationProgrammes;
+        const NUTRITION_PROGRAMS = Settings.subGroups.nutritionProgrammes;
+        const LDCS = Settings.subGroups.ldcs;
+        const LLDCS = Settings.subGroups.lldcs;
+        const SIDS = Settings.subGroups.sids;
+        const numberCodes = Settings.numberCodes;
+
         let figureMillionDividend = Settings.figureMillionDividend;
         (async function getData() {
             const result = Papa.parse(await fetchCsv());
@@ -30,33 +39,37 @@ function HealthFirst(props) {
                         indicator: d[1],
                         subGroup: d[2],
                         timePeriod: d[3],
-                        value: d[4]
+                        quarterOneValue: parseFloat(d[4]),
+                        quarterTwoValue: parseFloat(d[5])
                     }
                     data.push(obj);
                 });
 
-                let vaccinationData = data.filter(d => d.code === '1');
-                let mHealth = vaccinationData.filter(v => v.subGroup == Settings.subGroups.maternalHealth);
-                let vProgram = vaccinationData.filter(v => v.subGroup == Settings.subGroups.vaccinationProgrammes);
-                let nutritionProgram = vaccinationData.filter(v => v.subGroup == Settings.subGroups.nutritionProgrammes);
+                let vaccinationData = data.filter(d => d.code === numberCodes.ONE);
+                let mHealth = vaccinationData.filter(v => v.subGroup === MATERNAL_HEALTH);
+                let vProgram = vaccinationData.filter(v => v.subGroup === VACCINATION_PROGRAMS);
+                let nutritionProgram = vaccinationData.filter(v => v.subGroup === NUTRITION_PROGRAMS);
 
-                let mValue = (mHealth.length > 0) ? parseFloat((mHealth[0].value / figureMillionDividend).toFixed(1)) : 0;
-                let vValue = (vProgram.length > 0) ? parseFloat((vProgram[0].value / figureMillionDividend).toFixed(1)) : 0;
-                let nValue = (nutritionProgram.length > 0) ? parseFloat((nutritionProgram[0].value / figureMillionDividend).toFixed(1)) : 0;
+                let mValue = (mHealth.length > 0) ? parseFloat((mHealth[0].quarterOneValue / figureMillionDividend).toFixed(1)) : 0;
+                let vValue = (vProgram.length > 0) ? parseFloat((vProgram[0].quarterOneValue / figureMillionDividend).toFixed(1)) : 0;
+                let nValue = (nutritionProgram.length > 0) ? parseFloat((nutritionProgram[0].quarterOneValue / figureMillionDividend).toFixed(1)) : 0;
                 setMaternalHealth(mValue);
                 setVaccinationProgrammes(vValue);
                 setNutritionProgrammes(nValue);
 
-                let ldcsResult = data.filter(v => v.code === '2' && v.subGroup === Settings.subGroups.ldcs);
-                let lldcsResult = data.filter(v => v.code === '2' && v.subGroup === Settings.subGroups.lldcs);
-                let sidsResult = data.filter(v => v.code === '2' && v.subGroup === Settings.subGroups.sids);
+                /*
+                    TODO: Do we need a quarter filter here for this list
+                */
+                let ldcsResult = data.filter(v => v.code === numberCodes.TWO && v.subGroup === LDCS);
+                let lldcsResult = data.filter(v => v.code === numberCodes.TWO && v.subGroup === LLDCS);
+                let sidsResult = data.filter(v => v.code === numberCodes.TWO && v.subGroup === SIDS);
 
                 let ldcsObj = {
                     subGroup: Settings.subGroups.ldcs,
                     value: 0
                 };
                 if (ldcsResult.length > 0) {
-                    ldcsObj.value = parseFloat((ldcsResult[0].value / figureMillionDividend).toFixed(1));
+                    ldcsObj.value = parseFloat((ldcsResult[0].quarterOneValue / figureMillionDividend).toFixed(1));
                 }
 
                 let lldcsObj = {
@@ -64,7 +77,7 @@ function HealthFirst(props) {
                     value: 0
                 };
                 if (lldcsResult.length > 0) {
-                    lldcsObj.value = parseFloat((lldcsResult[0].value / figureMillionDividend).toFixed(1));
+                    lldcsObj.value = parseFloat((lldcsResult[0].quarterOneValue / figureMillionDividend).toFixed(1));
                 }
 
                 let sidsObj = {
@@ -72,7 +85,7 @@ function HealthFirst(props) {
                     value: 0
                 };
                 if (sidsResult.length > 0) {
-                    sidsObj.value = parseFloat((sidsResult[0].value / figureMillionDividend).toFixed(1));
+                    sidsObj.value = parseFloat((sidsResult[0].quarterOneValue / figureMillionDividend).toFixed(1));
                 }
 
                 setVaccinationChartData(vaccinationData);

@@ -529,6 +529,17 @@ const Settings = {
         "lldcs": "LLDCs",
         "sids": "SIDS"
     },
-    "figureMillionDividend" : 100000
+    "quarters" : {
+        "quarterOne": "Q1",
+        "quarterTwo": "Q2",
+        "quarterThree": "Q3",
+        "quarterFour": "Q4",
+    },
+    "numberCodes" : {
+        ONE: '1',
+        TWO: '2',
+        THREE: 3
+    },
+    "figureMillionDividend" : 100000,
 }
 export default Settings;

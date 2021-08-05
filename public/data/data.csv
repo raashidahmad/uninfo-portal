@@ -1,90 +1,90 @@
-Code,Indicator,Subgroup,TimePeriod,Value
-1,Indicator 1.1,Maternal Health,Q1,14614555
-1,Indicator 1.1,Nutrition Programmes,Q1,10457727
-1,Indicator 1.1,Vaccination Programmes,Q1,9977869
-2,Indicator 1.1,LDCs,Q1,12227298
-2,Indicator 1.1,LLDCs,Q1,1552376
-2,Indicator 1.1,SIDS,Q1,35020
-,Indicator 1.2,Immunization catch-up sessions,Q1,555064
-,Indicator 1.2,Modified routine immunization sessions,Q1,28424
-,Indicator 1.2,Provision of Immunization training and supplies,Q1,2835038
-,Indicator 1.2,Reporting on vaccine stock status,Q1,3924
-,Indicator 1.2,Supporting surveillance of vaccine preventable diseases,Q1,1949
-,Indicator 1.2,Total,Q1,3424399
-,Indicator 1.3,Core Essential Health Services,Q1,87
-,Indicator 1.3,Health Sector Policies Implemented,Q1,76
-,Indicator 1.3,Multisectoral Mental Health and Psychosocial Support,Q1,86
-,Indicator 1.4,Community health worker,Q1,42518
-,Indicator 1.4,Health workers based at health care facilities,Q1,34847
-,Indicator 1.4,Total,Q1,77365
-,Indicator 2.1,Boys (0-17 years),Q1,1641799
-,Indicator 2.1,Girls (0-17 years),Q1,1699056
-,Indicator 2.1,Men (18 years and above),Q1,1309638
-,Indicator 2.1,"Migrants, refugees, stateless and internally displaced persons",Q1,326175
-,Indicator 2.1,Persons with disabilities,Q1,77342
-,Indicator 2.1,Women (18 years and above),Q1,1680472
-,Indicator 2.1,Total2.1,Q1,6734482
-,Indicator 2.2,Boys in Pre-Primary,Q1,729938
-,Indicator 2.2,Boys in Primary,Q1,16954130
-,Indicator 2.2,Boys in Secondary,Q1,4303890
-,Indicator 2.2,Female in Tertiary and Skills Training,Q1,3055
-,Indicator 2.2,Girls in Pre-Primary,Q1,1748670
-,Indicator 2.2,Girls in Primary,Q1,13891711
-,Indicator 2.2,Girls in Secondary,Q1,4365335
-,Indicator 2.2,Male in Tertiary and Skills Training,Q1,2365
-,Indicator 2.2,Total2.2,Q1,41999094
-,Indicator 2.3,Cash based transfer as alternative to meals - Boys in primary school,Q1,0
-,Indicator 2.3,Cash based transfer as alternative to meals - Children in primary school,Q1,1000
-,Indicator 2.3,Cash based transfer as alternative to meals - Girls in primary school,Q1,0
-,Indicator 2.3,Meals - Boys in primary school,Q1,1451871
-,Indicator 2.3,Meals - Children in primary school,Q1,2447620
-,Indicator 2.3,Meals - Girls in primary school,Q1,1311899
-,Indicator 2.3,Take-home ration as alternative to meals - Boys in primary school,Q1,150659
-,Indicator 2.3,Take-home ration as alternative to meals - Children in primary school,Q1,305750
-,Indicator 2.3,Take-home ration as alternative to meals - Girls in primary school,Q1,113766
-,Indicator 2.3,Total2.3,Q1,5782565
-,Indicator 2.5,Cash for work (productivity),Q1,352250
-,Indicator 2.5,Cash transfer programmes,Q1,10701977
-,Indicator 2.5,Food and nutrition schemes,Q1,977253
-,Indicator 2.5,Human rights protection services,Q1,148433
-,Indicator 2.5,Legal aid services,Q1,69473
-,Indicator 2.5,Pyschosocial support services,Q1,138993
-,Indicator 2.5,Total2.5,Q1,12388379
-,Indicator 3.2,Formal sector workers,Q1,42559
-,Indicator 3.2,Informal sector workers,Q1,762411
-,Indicator 3.2,Total3.2a,Q1,804970
-,Indicator 3.2,"Micro, small, medium enterprises (MSMEs)",Q1,42070
-,Indicator 3.2,"Private sector companies, excluding MSMEs",Q1,932
-,Indicator 3.2,Total3.2b,Q1,43002
-,Indicator 3.4,Improve protective measures for food supply workers,Q1,163086
-,Indicator 3.4,Protect livelihoods by addressing food supply bottlenecks,Q1,179974
-,Indicator 3.4,Total3.4,Q1,343060
-,Indicator 4.1,Fiscal and public debt assessment,Q1,11
-,Indicator 4.1,Gender sensitive impact assessments,Q1,40
-,Indicator 4.1,Human impact needs assessment for at risk populations,Q1,28
-,Indicator 4.1,Labour market impact assessment,Q1,41
-,Indicator 4.1,Macro-meso economic needs assessment,Q1,22
-,Indicator 4.1,Multi-sectoral and sectoral needs assessment,Q1,35
-,Indicator 4.2,Fiscal policy,Q1,12
-,Indicator 4.2,Labour market policies,Q1,34
-,Indicator 4.2,Social protection policy,Q1,38
-,Indicator 4.2,"Socio-economic policy, including employment",Q1,23
-,Indicator 4.2,Women’s empowerment policy,Q1,21
-,Indicator 4.2,SEIA_No,Q1,76
-,Indicator 4.2,Policies_SEIA,Q1,56
-,Indicator 5.1,Employers and business membership organizations (EBMOs),Q1,970
-,Indicator 5.1,Trade unions and workers organizations,Q1,102
-,Indicator 5.2,Community based organisations in fragile and conflict-affected countries,Q1,858
-,Indicator 5.2,Community organization representing other at-risk population,Q1,389
-,Indicator 5.2,Community-based organizations providing livelihoods support and basic services delivery,Q1,782
-,Indicator 5.2,Indigenous community,Q1,127
-,Indicator 5.2,National human rights institutions (NHRIs),Q1,53
-,Indicator 5.2,Religious community organizations,Q1,73
-,Indicator 5.2,"Urban community based organizations, networks, associations and slum federations",Q1,313
-,Indicator 5.2,Women organizations,Q1,653
-,Indicator 5.2,Youth organizations,Q1,222
-,Indicator 5.3,Advocacy and political engagement spaces at national level,Q1,19
-,Indicator 5.3,Advocacy and political engagement spaces at sub-national level,Q1,73
-,Indicator 5.3,Social dialogue spaces at national level,Q1,22
-,Indicator 5.3,Social dialogue spaces at sub-national level,Q1,117
-,Indicator 5.3,TotalSpaces,Q1,92
+Code,Indicator,Subgroup,TimePeriod,Q1,Q2
+1,Indicator 1.1,Maternal Health,Q1,14614555,12614555
+1,Indicator 1.1,Nutrition Programmes,Q1,10457727,9457727
+1,Indicator 1.1,Vaccination Programmes,Q1,9977869,8877869
+2,Indicator 1.1,LDCs,Q1,12227298,
+2,Indicator 1.1,LLDCs,Q1,1552376,
+2,Indicator 1.1,SIDS,Q1,35020,
+,Indicator 1.2,Immunization catch-up sessions,Q1,555064,
+,Indicator 1.2,Modified routine immunization sessions,Q1,28424,
+,Indicator 1.2,Provision of Immunization training and supplies,Q1,2835038,
+,Indicator 1.2,Reporting on vaccine stock status,Q1,3924,
+,Indicator 1.2,Supporting surveillance of vaccine preventable diseases,Q1,1949,
+,Indicator 1.2,Total,Q1,3424399,
+,Indicator 1.3,Core Essential Health Services,Q1,87,
+,Indicator 1.3,Health Sector Policies Implemented,Q1,76,
+,Indicator 1.3,Multisectoral Mental Health and Psychosocial Support,Q1,86,
+,Indicator 1.4,Community health worker,Q1,42518,
+,Indicator 1.4,Health workers based at health care facilities,Q1,34847,
+,Indicator 1.4,Total,Q1,77365,
+,Indicator 2.1,Boys (0-17 years),Q1,1641799,
+,Indicator 2.1,Girls (0-17 years),Q1,1699056,
+,Indicator 2.1,Men (18 years and above),Q1,1309638,
+,Indicator 2.1,"Migrants, refugees, stateless and internally displaced persons",Q1,326175,
+,Indicator 2.1,Persons with disabilities,Q1,77342,
+,Indicator 2.1,Women (18 years and above),Q1,1680472,
+,Indicator 2.1,Total2.1,Q1,6734482,
+,Indicator 2.2,Boys in Pre-Primary,Q1,729938,
+,Indicator 2.2,Boys in Primary,Q1,16954130,
+,Indicator 2.2,Boys in Secondary,Q1,4303890,
+,Indicator 2.2,Female in Tertiary and Skills Training,Q1,3055,
+,Indicator 2.2,Girls in Pre-Primary,Q1,1748670,
+,Indicator 2.2,Girls in Primary,Q1,13891711,
+,Indicator 2.2,Girls in Secondary,Q1,4365335,
+,Indicator 2.2,Male in Tertiary and Skills Training,Q1,2365,
+,Indicator 2.2,Total2.2,Q1,41999094,
+,Indicator 2.3,Cash based transfer as alternative to meals - Boys in primary school,Q1,0,
+,Indicator 2.3,Cash based transfer as alternative to meals - Children in primary school,Q1,1000,
+,Indicator 2.3,Cash based transfer as alternative to meals - Girls in primary school,Q1,0,
+,Indicator 2.3,Meals - Boys in primary school,Q1,1451871,
+,Indicator 2.3,Meals - Children in primary school,Q1,2447620,
+,Indicator 2.3,Meals - Girls in primary school,Q1,1311899,
+,Indicator 2.3,Take-home ration as alternative to meals - Boys in primary school,Q1,150659,
+,Indicator 2.3,Take-home ration as alternative to meals - Children in primary school,Q1,305750,
+,Indicator 2.3,Take-home ration as alternative to meals - Girls in primary school,Q1,113766,
+,Indicator 2.3,Total2.3,Q1,5782565,
+,Indicator 2.5,Cash for work (productivity),Q1,352250,
+,Indicator 2.5,Cash transfer programmes,Q1,10701977,
+,Indicator 2.5,Food and nutrition schemes,Q1,977253,
+,Indicator 2.5,Human rights protection services,Q1,148433,
+,Indicator 2.5,Legal aid services,Q1,69473,
+,Indicator 2.5,Pyschosocial support services,Q1,138993,
+,Indicator 2.5,Total2.5,Q1,12388379,
+,Indicator 3.2,Formal sector workers,Q1,42559,
+,Indicator 3.2,Informal sector workers,Q1,762411,
+,Indicator 3.2,Total3.2a,Q1,804970,
+,Indicator 3.2,"Micro, small, medium enterprises (MSMEs)",Q1,42070,
+,Indicator 3.2,"Private sector companies, excluding MSMEs",Q1,932,
+,Indicator 3.2,Total3.2b,Q1,43002,
+,Indicator 3.4,Improve protective measures for food supply workers,Q1,163086,
+,Indicator 3.4,Protect livelihoods by addressing food supply bottlenecks,Q1,179974,
+,Indicator 3.4,Total3.4,Q1,343060,
+,Indicator 4.1,Fiscal and public debt assessment,Q1,11,
+,Indicator 4.1,Gender sensitive impact assessments,Q1,40,
+,Indicator 4.1,Human impact needs assessment for at risk populations,Q1,28,
+,Indicator 4.1,Labour market impact assessment,Q1,41,
+,Indicator 4.1,Macro-meso economic needs assessment,Q1,22,
+,Indicator 4.1,Multi-sectoral and sectoral needs assessment,Q1,35,
+,Indicator 4.2,Fiscal policy,Q1,12,
+,Indicator 4.2,Labour market policies,Q1,34,
+,Indicator 4.2,Social protection policy,Q1,38,
+,Indicator 4.2,"Socio-economic policy, including employment",Q1,23,
+,Indicator 4.2,Womenï¿½s empowerment policy,Q1,21,
+,Indicator 4.2,SEIA_No,Q1,76,
+,Indicator 4.2,Policies_SEIA,Q1,56,
+,Indicator 5.1,Employers and business membership organizations (EBMOs),Q1,970,
+,Indicator 5.1,Trade unions and workers organizations,Q1,102,
+,Indicator 5.2,Community based organisations in fragile and conflict-affected countries,Q1,858,
+,Indicator 5.2,Community organization representing other at-risk population,Q1,389,
+,Indicator 5.2,Community-based organizations providing livelihoods support and basic services delivery,Q1,782,
+,Indicator 5.2,Indigenous community,Q1,127,
+,Indicator 5.2,National human rights institutions (NHRIs),Q1,53,
+,Indicator 5.2,Religious community organizations,Q1,73,
+,Indicator 5.2,"Urban community based organizations, networks, associations and slum federations",Q1,313,
+,Indicator 5.2,Women organizations,Q1,653,
+,Indicator 5.2,Youth organizations,Q1,222,
+,Indicator 5.3,Advocacy and political engagement spaces at national level,Q1,19,
+,Indicator 5.3,Advocacy and political engagement spaces at sub-national level,Q1,73,
+,Indicator 5.3,Social dialogue spaces at national level,Q1,22,
+,Indicator 5.3,Social dialogue spaces at sub-national level,Q1,117,
+,Indicator 5.3,TotalSpaces,Q1,92,
