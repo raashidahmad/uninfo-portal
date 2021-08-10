@@ -3,6 +3,7 @@ import { LineChart, XAxis, Tooltip, CartesianGrid, Line, YAxis } from 'recharts'
 import { BarChart, Bar, Legend } from 'recharts';
 
 function Vaccination(props) {
+    console.log(props);
     return (
         <div>
             <div className="row success-container margin-top-10">
@@ -41,7 +42,7 @@ function Vaccination(props) {
                         <YAxis />
                         <Tooltip />
                         <Legend />
-                        <Line type="monotone" dataKey="quarterOneValue" stroke="#8884d8" activeDot={{ r: 8 }} />
+                        <Line type="monotone" dataKey="quarterOneValue" stroke="#8884d8" />
                         <Line type="monotone" dataKey="quarterTwoValue" stroke="#82ca9d" />
                     </LineChart>
                 </div>
