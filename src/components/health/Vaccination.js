@@ -3,7 +3,6 @@ import { LineChart, XAxis, Tooltip, CartesianGrid, Line, YAxis } from 'recharts'
 import { BarChart, Bar, Legend } from 'recharts';
 
 function Vaccination(props) {
-    console.log(props);
     return (
         <div>
             <div className="row success-container margin-top-10">

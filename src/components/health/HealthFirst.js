@@ -48,6 +48,7 @@ function HealthFirst(props) {
                 });
 
                 let vaccinationData = data.filter(d => d.code === numberCodes.ONE);
+                console.log(vaccinationData);
                 let vaccinationChartData = [];
                 vaccinationData.forEach((d) => {
                     let subGroup = d.subGroup;
@@ -73,10 +74,10 @@ function HealthFirst(props) {
 
                     let filterSubGroup = vaccinationChartData.filter(v => v.subGroup === subGroup);
                     if (filterSubGroup.length > 0) {
-                        filterSubGroup[0].quarterOneValue = q1Value;
-                        filterSubGroup[0].quarterTwoValue = q2Value;
-                        filterSubGroup[0].quarterThreeValue = q3Value;
-                        filterSubGroup[0].quarterFourValue = q4Value;
+                        filterSubGroup[0].quarterOneValue = q1Value !== 0 ? q1Value : filterSubGroup[0].quarterOneValue;
+                        filterSubGroup[0].quarterTwoValue = q2Value !== 0 ? q2Value : filterSubGroup[0].quarterTwoValue;
+                        filterSubGroup[0].quarterThreeValue = q3Value !== 0 ? q3Value : filterSubGroup[0].quarterThreeValue;
+                        filterSubGroup[0].quarterFourValue = q4Value !== 0 ? q4Value : filterSubGroup[0].quarterFourValue;
                     } else {
                         vaccinationChartData.push({
                             subGroup: subGroup,
