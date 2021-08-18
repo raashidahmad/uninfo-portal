@@ -43,6 +43,8 @@ function Vaccination(props) {
                         <Legend />
                         <Line type="monotone" dataKey="quarterOneValue" stroke="#8884d8" />
                         <Line type="monotone" dataKey="quarterTwoValue" stroke="#82ca9d" />
+                        <Line type="monotone" dataKey="quarterThreeValue" stroke="#82ca9d" />
+                        <Line type="monotone" dataKey="quarterFourValue" stroke="#82ca9d" />
                     </LineChart>
                 </div>
 
@@ -66,6 +68,8 @@ function Vaccination(props) {
                         <Legend />
                         <Bar dataKey="quarterOneValue" fill="#8884d8" />
                         <Bar dataKey="quarterTwoValue" fill="#82ca9d" />
+                        <Bar dataKey="quarterThreeValue" fill="#82ca9d" />
+                        <Bar dataKey="quarterFourValue" fill="#82ca9d" />
                     </BarChart>
                 </div>
             </div>
