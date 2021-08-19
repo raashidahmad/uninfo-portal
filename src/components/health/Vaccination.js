@@ -1,11 +1,63 @@
 import React from 'react';
-import { LineChart, XAxis, Tooltip, CartesianGrid, Line, YAxis } from 'recharts';
-import { BarChart, Bar, Legend } from 'recharts';
+import { Line } from 'react-chartjs-2';
 
 function Vaccination(props) {
+    let labels = props.data.map(v => v.subGroup);
+    let quarterOneData = props.data.map(v => v.quarterOneValue);
+    let quarterTwoData = props.data.map(v => v.quarterTwoValue);
+
+    console.log(labels);
+
+    /*let lineChartData = {
+        labels: labels,
+        datasets: [
+          {
+            label: 'Q1',
+            data: quarterOneData,
+            //fill: false,
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgba(255, 99, 132, 0.2)',
+          },
+          {
+            label: 'Q2',
+            data: quarterTwoData,
+            //fill: false,
+            backgroundColor: 'rgb(54, 162, 235)',
+            borderColor: 'rgba(54, 162, 235, 0.2)',
+          },
+        ],
+      };
+
+      let lineChartOptions = {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          }
+        }
+      };*/
+      const lineChartData = {
+        labels: labels,
+        datasets: [
+          {
+            label: "Q1",
+            data: quarterOneData,
+            fill: true,
+            backgroundColor: "rgba(75,192,192,0.2)",
+            borderColor: "rgba(75,192,192,1)"
+          },
+          {
+            label: "Q2",
+            data: quarterTwoData,
+            fill: false,
+            borderColor: "#742774"
+          }
+        ]
+      };
+
     return (
         <div>
-            <div className="row success-container margin-top-10">
+            <div cl assName="row success-container margin-top-10">
                 <span className="row margin-left-10">
                     <h5>People Accessing Vaccination, Maternal Health & Nutrition Programmes.</h5>
                 </span>
@@ -25,52 +77,12 @@ function Vaccination(props) {
                 </div>
                 <div className="col-md-5">
                     <h5 className="text-success margin-top-10">Quarterly Progress</h5>
-                    <LineChart
-                        width={480}
-                        height={300}
-                        data={props.data}
-                        margin={{
-                            top: 5,
-                            right: 30,
-                            left: 20,
-                            bottom: 5,
-                        }}
-                    >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="subGroup" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                        <Line type="monotone" dataKey="quarterOneValue" stroke="#8884d8" />
-                        <Line type="monotone" dataKey="quarterTwoValue" stroke="#82ca9d" />
-                        <Line type="monotone" dataKey="quarterThreeValue" stroke="#82ca9d" />
-                        <Line type="monotone" dataKey="quarterFourValue" stroke="#82ca9d" />
-                    </LineChart>
+                    <Line data={lineChartData} />
                 </div>
 
                 <div className="col-md-5">
                     <h5 className="text-success margin-top-10">People Supported by Region</h5>
-                    <BarChart
-                        width={500}
-                        height={300}
-                        data={props.data}
-                        margin={{
-                            top: 5,
-                            right: 30,
-                            left: 20,
-                            bottom: 5
-                        }}
-                    >
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="subGroup" type="category" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                        <Bar dataKey="quarterOneValue" fill="#8884d8" />
-                        <Bar dataKey="quarterTwoValue" fill="#82ca9d" />
-                        <Bar dataKey="quarterThreeValue" fill="#82ca9d" />
-                        <Bar dataKey="quarterFourValue" fill="#82ca9d" />
-                    </BarChart>
+                    
                 </div>
             </div>
 

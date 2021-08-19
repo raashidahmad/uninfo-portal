@@ -48,7 +48,6 @@ function HealthFirst(props) {
                 });
 
                 let vaccinationData = data.filter(d => d.code === numberCodes.ONE);
-                //console.log(vaccinationData);
                 let vaccinationChartData = [];
                 vaccinationData.forEach((d) => {
                     let subGroup = d.subGroup;
