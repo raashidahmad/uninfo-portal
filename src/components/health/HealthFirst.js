@@ -9,7 +9,7 @@ import HealthWorker from "./HealthWorker";
 import Settings from "../../config/settings";
 
 function HealthFirst(props) {
-    const [vaccinationChartData, setVaccinationChartData] = useState([]);
+    const [vaccinationData, setVaccinationChartData] = useState([]);
     const [maternalHealthValue, setMaternalHealth] = useState([]);
     const [vaccinationProgrammesValue, setVaccinationProgrammes] = useState([]);
     const [nutritionProgrammesValue, setNutritionProgrammes] = useState([]);
@@ -19,9 +19,9 @@ function HealthFirst(props) {
     
     useEffect(() => {
         const QUARTER_ONE = Settings.quarters.quarterOne;
-        const QUARTER_TWO = Settings.quarters.quarterTwo;
-        const QUARTER_THREE = Settings.quarters.quarterThree;
-        const QUARTER_FOUR = Settings.quarters.quarterFour;
+        //const QUARTER_TWO = Settings.quarters.quarterTwo;
+        //const QUARTER_THREE = Settings.quarters.quarterThree;
+        //const QUARTER_FOUR = Settings.quarters.quarterFour;
         const MATERNAL_HEALTH = Settings.subGroups.maternalHealth;
         const VACCINATION_PROGRAMS = Settings.subGroups.vaccinationProgrammes;
         const NUTRITION_PROGRAMS = Settings.subGroups.nutritionProgrammes;
@@ -48,7 +48,7 @@ function HealthFirst(props) {
                 });
 
                 let vaccinationData = data.filter(d => d.code === numberCodes.ONE);
-                let vaccinationChartData = [];
+                /*let vaccinationChartData = [];
                 vaccinationData.forEach((d) => {
                     let subGroup = d.subGroup;
                     let q1Value = 0, q2Value = 0, q3Value = 0, q4Value = 0;
@@ -86,7 +86,7 @@ function HealthFirst(props) {
                             quarterFourValue: q4Value,
                         });
                     }
-                });
+                });*/
 
                 
                 let mHealth = vaccinationData.filter(v => v.subGroup === MATERNAL_HEALTH && v.timePeriod === QUARTER_ONE);
@@ -131,7 +131,7 @@ function HealthFirst(props) {
                     sidsObj.value = parseFloat((sidsResult[0].quarterValue / figureMillionDividend).toFixed(1));
                 }
 
-                setVaccinationChartData(vaccinationChartData);
+                setVaccinationChartData(vaccinationData);
                 setLDCsValue(ldcsObj);
                 setLLDCsValue(lldcsObj);                
                 setSIDsValue(sidsObj); 
@@ -193,7 +193,7 @@ function HealthFirst(props) {
                     </div>
                 </div>
             </div>
-            <Vaccination data={vaccinationChartData} ldcs={ldcsValue} lldcs={lldcsValue} sids={sidsValue} />
+            <Vaccination data={vaccinationData} ldcs={ldcsValue} lldcs={lldcsValue} sids={sidsValue} />
             <Immunization />
             <HealthWorker />
         </div>

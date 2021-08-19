@@ -1,59 +1,42 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
+import Settings from '../../config/settings';
 
 function Vaccination(props) {
-    let labels = props.data.map(v => v.subGroup);
-    let quarterOneData = props.data.map(v => v.quarterOneValue);
-    let quarterTwoData = props.data.map(v => v.quarterTwoValue);
+    const MATERNAL_HEALTH = Settings.subGroups.maternalHealth;
+    const VACCINATION_PROGRAMS = Settings.subGroups.vaccinationProgrammes;
+    const NUTRITION_PROGRAMS = Settings.subGroups.nutritionProgrammes;
 
-    console.log(labels);
+    let labels = ['Q1', 'Q2', 'Q3', 'Q4' ];
+    let maternalHealthData = props.data.filter(d => d.subGroup === MATERNAL_HEALTH).map(d => d.quarterValue);
+    let vaccinationData = props.data.filter(d => d.subGroup === VACCINATION_PROGRAMS).map(d => d.quarterValue);
+    let nutritionData = props.data.filter(d => d.subGroup === NUTRITION_PROGRAMS).map(d => d.quarterValue);
 
-    /*let lineChartData = {
-        labels: labels,
-        datasets: [
-          {
-            label: 'Q1',
-            data: quarterOneData,
-            //fill: false,
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgba(255, 99, 132, 0.2)',
-          },
-          {
-            label: 'Q2',
-            data: quarterTwoData,
-            //fill: false,
-            backgroundColor: 'rgb(54, 162, 235)',
-            borderColor: 'rgba(54, 162, 235, 0.2)',
-          },
-        ],
-      };
 
-      let lineChartOptions = {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'top',
-          }
+    const lineChartData = {
+    labels: labels,
+    datasets: [
+        {
+        label: MATERNAL_HEALTH,
+        data: maternalHealthData,
+        fill: false,
+        //backgroundColor: "rgba(75,192,192,0.2)",
+        borderColor: "#009e60"
+        },
+        {
+        label: VACCINATION_PROGRAMS,
+        data: vaccinationData,
+        fill: false,
+        borderColor: "#742774"
+        },
+        {
+        label: NUTRITION_PROGRAMS,
+        data: nutritionData,
+        fill: false,
+        borderColor: "#ff4545"
         }
-      };*/
-      const lineChartData = {
-        labels: labels,
-        datasets: [
-          {
-            label: "Q1",
-            data: quarterOneData,
-            fill: true,
-            backgroundColor: "rgba(75,192,192,0.2)",
-            borderColor: "rgba(75,192,192,1)"
-          },
-          {
-            label: "Q2",
-            data: quarterTwoData,
-            fill: false,
-            borderColor: "#742774"
-          }
-        ]
-      };
+    ]
+    };
 
     return (
         <div>
